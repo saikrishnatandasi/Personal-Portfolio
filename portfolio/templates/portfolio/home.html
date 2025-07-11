@@ -539,7 +539,7 @@
                     <div class="glass-card rounded-2xl overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
                         <div class="relative overflow-hidden">
                             <img src="https://i.postimg.cc/gJXRGBQ7/Screenshot-2025-07-11-122454.png' border='0' alt='Screenshot-2025-07-11-122454" 
-                                 alt="Emplyee Attendance Dashboard" 
+                                 alt="Employee Attendance Dashboard" 
                                  class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-opacity duration-300"></div>
                             <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -580,8 +580,7 @@
             <div class="flex flex-wrap justify-center gap-4 mb-12">
                 <button class="btn-hero px-6 py-3 rounded filter-btn active" data-filter="all">All Projects</button>
                 <button class="px-6 py-3 border border-primary/30 hover:border-primary hover:bg-primary/10 rounded filter-btn" data-filter="web">Web Development</button>
-                <button class="px-6 py-3 border border-primary/30 hover:border-primary hover:bg-primary/10 rounded filter-btn" data-filter="mobile">Mobile Apps</button>
-                <button class="px-6 py-3 border border-primary/30 hover:border-primary hover:bg-primary/10 rounded filter-btn" data-filter="design">Design</button>
+                <button class="px-6 py-3 border border-primary/30 hover:border-primary hover:bg-primary/10 rounded filter-btn" data-filter="data_analytics">Data Analytics</button>
             </div>
 
             <!-- All Projects Grid -->
@@ -614,7 +613,7 @@
                             I'm always open to collaborating on data-driven projects, analytical challenges, 
                             and opportunities where I can learn and grow. 
                             Whether you're exploring new insights or seeking a fresh perspective,
-                            I’d love to be part of the conversation — feel free to reach out!
+                            I'd love to be part of the conversation — feel free to reach out!
                         </p>
 
                         <div class="space-y-6">
@@ -770,7 +769,7 @@
                     <!-- Brand Section -->
                     <div class="space-y-6">
                         <div>
-                            <h3 class="font-serif text-2xl font-bold text-primary mb-4">
+                            <h3 class="font-serif text-2xl font-bold text-violet-400 mb-4">
                                 Portfolio
                             </h3>
                             <p class="text-muted-foreground leading-relaxed max-w-md">
@@ -780,13 +779,7 @@
                             </p>
                         </div>
                         
-                        <div class="flex items-center gap-2 text-sm text-muted-foreground">
-                            <span>Made with</span>
-                            <svg class="h-4 w-4 text-red-500 fill-current" viewBox="0 0 24 24">
-                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                            </svg>
-                            <span>using HTML, CSS & JavaScript</span>
-                        </div>
+                        
                     </div>
 
                     <!-- Links Section -->
@@ -914,32 +907,39 @@
             // Sample projects data
             const projects = [
                 {
-                    title: 'Brand Identity Design',
-                    category: 'design',
-                    description: 'Complete brand identity design for a sustainable fashion startup.',
-                    technologies: ['Figma', 'Illustrator', 'Photoshop'],
-                    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80'
+                    title: 'Virat Kohli Statistics',
+                    category: 'data_analytics',
+                    description: 'Power BI Dashboard of Virat Kohli Stats in all formats',
+                    technologies: ['Power BI', 'Web Scraping', 'DAX'],
+                    image: 'https://i.postimg.cc/C5Qjygd2/virat-stats.jpg',
+                    link: 'https://app.fabric.microsoft.com/view?r=eyJrIjoiNTA1MTAzMTItMTYyYS00NGNiLWJkYzMtYWM4NDZlZWFlZjZlIiwidCI6ImNlMmNmNDNiLTI2M2ItNDU5OC1iODRkLWVkMTA1YmMzZWJjYyJ9',
+                    repository:"https://github.com/saikrishnatandasi/virat-kohli-batting-analysis.git"
                 },
                 {
-                    title: 'Dashboard Analytics',
+                    title: 'CarZone (Car Selling Website)',
                     category: 'web',
-                    description: 'Real-time analytics dashboard with interactive data visualizations.',
-                    technologies: ['Vue.js', 'D3.js', 'Express', 'PostgreSQL'],
-                    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
+                    description: 'Website for  Second hand Car Business',
+                    technologies: ['Django', 'HTML', 'Heroku', 'PostgreSQL'],
+                    image: 'https://i.postimg.cc/T24m3TY7/Screenshot-2025-07-11-162645.png',
+                    link : "https://mysterious-depths-89095-3f3bd64d8c07.herokuapp.com/",
+                    repository: "https://github.com/saikrishnatandasi/carzone-project.git"
                 },
                 {
-                    title: 'Fitness Tracker App',
-                    category: 'mobile',
-                    description: 'Cross-platform fitness tracking app with social features.',
-                    technologies: ['Flutter', 'Dart', 'Firebase', 'HealthKit'],
-                    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80'
+                    title: 'Chocolate Sales Dashboard',
+                    category: 'data_analytics',
+                    description: 'Dashboard featuring comprehensive sales performance for a chocolate company across multiple markets and product lines.',
+                    technologies: ['Power BI', 'SQL', 'Power Query', 'SVGs'],
+                    image: 'https://i.postimg.cc/Sx6pDLZB/chocolate-sales.jpg',
+                    link:"https://app.fabric.microsoft.com/view?r=eyJrIjoiN2Q2NGJlMTktZjUyZS00ZDZiLWI3MzMtMDcyN2VjYzE3ODQ0IiwidCI6ImNlMmNmNDNiLTI2M2ItNDU5OC1iODRkLWVkMTA1YmMzZWJjYyJ9",
+                    repository: "https://github.com/saikrishnatandasi/Chocolate-Sales-Dashboard.git"
                 },
                 {
                     title: 'Restaurant Website',
                     category: 'web',
                     description: 'Elegant restaurant website with online reservation system.',
                     technologies: ['Next.js', 'Tailwind', 'Sanity CMS'],
-                    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
+                    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80',
+                    link:"#"
                 }
             ];
 
@@ -953,12 +953,12 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div class="flex gap-2">
-                                    <button class="h-8 w-8 p-0 bg-background/80 border border-primary/30 rounded">
-                                        <svg class="h-4 w-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <button class="btn-hero px-4 py-2 text-sm rounded" onclick = "window.open('${project.link}','_blank')">
+                                        <svg class="h-4 w-4 mx-auto" fill="none" stroke="black" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                                         </svg>
                                     </button>
-                                    <button class="h-8 w-8 p-0 bg-background/80 border border-primary/30 rounded">
+                                    <button class="btn-hero px-4 py-2 text-sm rounded" onclick = "window.open('${project.repository}','_blank')">
                                         <svg class="h-4 w-4 mx-auto" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                         </svg>
@@ -971,7 +971,7 @@
                             <p class="text-sm text-muted-foreground mb-4 line-clamp-2">${project.description}</p>
                             <div class="flex flex-wrap gap-1">
                                 ${project.technologies.slice(0, 3).map(tech => 
-                                    `<span class="px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-md border border-primary/20">${tech}</span>`
+                                    `<span class="px-2 py-1 text-xs font-medium bg-primary/10 text-purple-400 rounded-md border border-primary/20">${tech}</span>`
                                 ).join('')}
                                 ${project.technologies.length > 3 ? 
                                     `<span class="px-2 py-1 text-xs font-medium text-muted-foreground">+${project.technologies.length - 3} more</span>` 
