@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import  redirect, render
 from django.core.mail import send_mail
 from django.conf import settings
+from django.urls import reverse
 
 
 from .models import Project, Skill
@@ -37,7 +38,7 @@ def contact_view(request):
         subject = request.POST.get('subject', 'New Contact Form Submission')
         message = request.POST.get('message')
 
-        full_message = f"From: {name} <{email}>\n\n{message}"
+        full_message = f"From: {name}\n<{email}>\n\n{message}"
 
         send_mail(
             subject,
@@ -47,7 +48,16 @@ def contact_view(request):
             fail_silently=False,
         )
 
-        return render(request, 'portfolio/success.html')
+        return redirect(f"{reverse('success')}?name={name}")
+
 
     
     return render(request, 'portfolio/home.html')
+
+
+def success(request):
+    name = request.GET.get('name', 'User')
+    return render(request, 'portfolio/success.html', {'name': name})
+
+
+
