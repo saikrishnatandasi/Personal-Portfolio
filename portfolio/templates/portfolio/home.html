@@ -675,7 +675,8 @@
                 <!-- Contact Form -->
                 <div class="glass-card p-8 rounded-2xl">
                     <h3 class="text-2xl font-semibold mb-6">Send a Message</h3>
-                    <form id="contactForm" class="space-y-6">
+                    <form method="post" action="{% url 'contact_view' %}" id="contactForm" class="space-y-6">
+                        {% csrf_token %}
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div class="space-y-2">
                                 <label for="name" class="text-sm font-medium text-foreground">
@@ -687,7 +688,7 @@
                                     name="name"
                                     placeholder="Your name"
                                     required
-                                    class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                                    class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg text-black focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                                 >
                             </div>
                             <div class="space-y-2">
@@ -700,7 +701,7 @@
                                     name="email"
                                     placeholder="your.email@example.com"
                                     required
-                                    class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                                    class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg text-black focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                                 >
                             </div>
                         </div>
@@ -714,7 +715,7 @@
                                 id="subject"
                                 name="subject"
                                 placeholder="Project inquiry, collaboration, etc."
-                                class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                                class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg text-black focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
                             >
                         </div>
 
@@ -728,7 +729,7 @@
                                 placeholder="Tell me about your project, ideas, or how I can help..."
                                 rows="6"
                                 required
-                                class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none transition-colors"
+                                class="w-full px-4 py-3 bg-background/50 border border-border/30 rounded-lg text-black focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary resize-none transition-colors"
                             ></textarea>
                         </div>
 
@@ -783,7 +784,7 @@
                     </div>
 
                     <!-- Links Section -->
-                    <div class="grid sm:grid-cols-3 gap-8">
+                    <div class="grid sm:grid-cols-2 gap-8">
                         <div>
                             <h4 class="font-semibold text-foreground mb-4">Navigation</h4>
                             <ul class="space-y-3">
@@ -802,15 +803,7 @@
                                 <li><a href="https://www.instagram.com/saikrishna_tandasi/" target="_blank" class="text-muted-foreground hover:text-primary transition-colors text-sm">Instagram</a></li>
                             </ul>
                         </div>
-                        <div>
-                            <h4 class="font-semibold text-foreground mb-4">Services</h4>
-                            <ul class="space-y-3">
-                                <li><a href="#" class="text-muted-foreground hover:text-primary transition-colors text-sm">Web Development</a></li>
-                                <li><a href="#" class="text-muted-foreground hover:text-primary transition-colors text-sm">UI/UX Design</a></li>
-                                <li><a href="#" class="text-muted-foreground hover:text-primary transition-colors text-sm">Mobile Apps</a></li>
-                                <li><a href="#" class="text-muted-foreground hover:text-primary transition-colors text-sm">Consulting</a></li>
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -933,14 +926,7 @@
                     link:"https://app.fabric.microsoft.com/view?r=eyJrIjoiN2Q2NGJlMTktZjUyZS00ZDZiLWI3MzMtMDcyN2VjYzE3ODQ0IiwidCI6ImNlMmNmNDNiLTI2M2ItNDU5OC1iODRkLWVkMTA1YmMzZWJjYyJ9",
                     repository: "https://github.com/saikrishnatandasi/Chocolate-Sales-Dashboard.git"
                 },
-                {
-                    title: 'Restaurant Website',
-                    category: 'web',
-                    description: 'Elegant restaurant website with online reservation system.',
-                    technologies: ['Next.js', 'Tailwind', 'Sanity CMS'],
-                    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80',
-                    link:"#"
-                }
+                
             ];
 
             function renderProjects(filter = 'all') {

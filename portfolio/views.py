@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
+
+
 from .models import Project, Skill
 
 # Create your views here.
@@ -25,3 +29,25 @@ def about(request):
 
 def contact(request):
     return render(request, 'portfolio/contact.html')
+
+def contact_view(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject', 'New Contact Form Submission')
+        message = request.POST.get('message')
+
+        full_message = f"From: {name} <{email}>\n\n{message}"
+
+        send_mail(
+            subject,
+            full_message,
+            settings.EMAIL_HOST_USER,
+            ['saikrishnatandasi2001@gmail.com'],  # Where you want to receive the message
+            fail_silently=False,
+        )
+
+        return render(request, 'portfolio/success.html')
+
+    
+    return render(request, 'portfolio/home.html')
