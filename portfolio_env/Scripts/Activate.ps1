@@ -1,6 +1,6 @@
 <#
 .Synopsis
-Activate a Python virtual environment for the violett PowerShell session.
+Activate a Python virtual environment for the current PowerShell session.
 
 .Description
 Pushes the python executable for a virtual environment to the front of the
@@ -34,7 +34,7 @@ Activates the Python virtual environment located in the specified location.
 .Example
 Activate.ps1 -Prompt "MyPython"
 Activates the Python virtual environment that contains the Activate.ps1 script,
-and prefixes the violett prompt with the specified string (surrounded in
+and prefixes the current prompt with the specified string (surrounded in
 parentheses) while the virtual environment is active.
 
 .Notes
@@ -42,7 +42,7 @@ On Windows, it may be required to enable this Activate.ps1 script by setting the
 execution policy for the user. You can do this by issuing the following PowerShell
 command:
 
-PS C:\> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope violettUser
+PS C:\> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 For more information on Execution Policies: 
 https://go.microsoft.com/fwlink/?LinkID=135170
@@ -211,7 +211,7 @@ else {
 Write-Verbose "Prompt = '$Prompt'"
 Write-Verbose "VenvDir='$VenvDir'"
 
-# Deactivate any violettly active virtual environment, but leave the
+# Deactivate any currently active virtual environment, but leave the
 # deactivate function in place.
 deactivate -nondestructive
 
