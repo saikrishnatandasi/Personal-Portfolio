@@ -1,1 +1,1 @@
-web: gunicorn Personal Portfolio.wsgi
+web: gunicorn portfolio_project.wsgi
